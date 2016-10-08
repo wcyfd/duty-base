@@ -1,6 +1,6 @@
 package com.aim.duty.duty_base.entity;
 
-import com.aim.duty.duty_base.entity.AbstractProp;
+import com.aim.duty.duty_base.entity.base.AbstractProp;
 
 public class Forge extends AbstractProp {
 

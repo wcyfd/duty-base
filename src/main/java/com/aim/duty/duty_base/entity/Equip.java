@@ -3,7 +3,7 @@ package com.aim.duty.duty_base.entity;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.aim.duty.duty_base.entity.AbstractProp;
+import com.aim.duty.duty_base.entity.base.AbstractProp;
 
 public class Equip extends AbstractProp {
 

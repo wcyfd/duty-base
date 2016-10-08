@@ -10,10 +10,10 @@ import com.aim.duty.duty_base.entity.config.Shape3Config;
 public class ConfigCache {
 
 	public static void init() {
-		MineConfigCache.putConfig(new MineConfig(1, "铜", 80));
-		MineConfigCache.putConfig(new MineConfig(2, "铁", 120));
-		MineConfigCache.putConfig(new MineConfig(3, "银", 180));
-		MineConfigCache.putConfig(new MineConfig(4, "金", 200));
+		MineConfigCache.putConfig(new MineConfig(1, "铜", 80, 1,4));
+		MineConfigCache.putConfig(new MineConfig(2, "铁", 120, 2,8));
+		MineConfigCache.putConfig(new MineConfig(3, "银", 180, 3,12));
+		MineConfigCache.putConfig(new MineConfig(4, "金", 200, 4,16));
 
 		FuelConfigCache.putConfig(new FuelConfig(5, "木头", 10, 100, 8, 30));
 		FuelConfigCache.putConfig(new FuelConfig(6, "油", 20, 150, 20, 20));

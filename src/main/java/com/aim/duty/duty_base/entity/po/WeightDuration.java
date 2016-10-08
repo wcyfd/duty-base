@@ -1,4 +1,4 @@
-package com.aim.duty.duty_base.entity;
+package com.aim.duty.duty_base.entity.po;
 
 public class WeightDuration extends Weight {
 
