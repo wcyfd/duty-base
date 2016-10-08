@@ -1,4 +1,4 @@
-package com.aim.duty.duty_base.entity;
+package com.aim.duty.duty_base.entity.bo;
 
 public class Magic {
 	/** 魔法id */

@@ -1,4 +1,4 @@
-package com.aim.duty.duty_base.entity;
+package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractMagicProp;
 

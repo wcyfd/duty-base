@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import com.aim.duty.duty_base.entity.Magic;
+import com.aim.duty.duty_base.entity.bo.Magic;
 
 public abstract class AbstractMagicProp extends AbstractProp {
 	/** 魔法总计 */

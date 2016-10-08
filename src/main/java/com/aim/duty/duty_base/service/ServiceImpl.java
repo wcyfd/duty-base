@@ -1,7 +1,7 @@
 package com.aim.duty.duty_base.service;
 
 import com.aim.duty.duty_base.cache.config.FuelConfigCache;
-import com.aim.duty.duty_base.entity.Forge;
+import com.aim.duty.duty_base.entity.bo.Forge;
 import com.aim.duty.duty_base.entity.config.FuelConfig;
 import com.aim.duty.duty_base.util.Util;
 
