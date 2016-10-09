@@ -1,12 +1,11 @@
 package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractMagicProp;
+import com.aim.duty.duty_base.entity.base.Constant;
 
 public class Brick extends AbstractMagicProp {
 
 	private int mineId;
-
-	private int blood;
 
 	public int getMineId() {
 		return mineId;
@@ -16,17 +15,16 @@ public class Brick extends AbstractMagicProp {
 		this.mineId = mineId;
 	}
 
-	public int getBlood() {
-		return blood;
-	}
-
-	public void setBlood(int blood) {
-		this.blood = blood;
-	}
-
 	@Override
 	public boolean isChange() {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	protected byte getInitPropType() {
+		// TODO Auto-generated method stub
+		return Constant.BRICK;
+	}
+
 }

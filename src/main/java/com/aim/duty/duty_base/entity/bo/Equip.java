@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
+import com.aim.duty.duty_base.entity.base.Constant;
 
 public class Equip extends AbstractProp {
 
@@ -17,6 +18,12 @@ public class Equip extends AbstractProp {
 
 	public Map<String, Integer> getAttributeMap() {
 		return attributeMap;
+	}
+
+	@Override
+	protected byte getInitPropType() {
+		// TODO Auto-generated method stub
+		return Constant.EQUIP;
 	}
 
 }

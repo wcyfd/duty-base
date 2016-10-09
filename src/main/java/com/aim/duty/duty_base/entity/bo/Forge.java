@@ -1,6 +1,7 @@
 package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
+import com.aim.duty.duty_base.entity.base.Constant;
 
 public class Forge extends AbstractProp {
 
@@ -81,6 +82,12 @@ public class Forge extends AbstractProp {
 
 	public void setEquip(Equip equip) {
 		this.equip = equip;
+	}
+
+	@Override
+	protected byte getInitPropType() {
+		// TODO Auto-generated method stub
+		return Constant.FORGE;
 	}
 
 }
