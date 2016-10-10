@@ -1,10 +1,14 @@
 package com.aim.duty.duty_base.entity.base;
 
-public abstract class AbstractProp extends GameObject {
+public abstract class AbstractProp extends GameEntity {
 
 	private int id;
 	private int num;
 	protected byte propType = -1;
+
+	public AbstractProp() {
+		propType = propType == -1 ? getInitPropType() : this.propType;
+	}
 
 	public void setId(int id) {
 		this.id = id;
@@ -22,12 +26,13 @@ public abstract class AbstractProp extends GameObject {
 		this.num = num;
 	}
 
-//	public void setPropType(byte propType) {
-//		this.propType = propType;
-//	}
-
 	public byte getPropType() {
-		return propType == -1 ? getInitPropType() : this.propType;
+		return propType;
+	}
+
+	public AbstractProp clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return (AbstractProp) super.clone();
 	}
 
 	protected abstract byte getInitPropType();

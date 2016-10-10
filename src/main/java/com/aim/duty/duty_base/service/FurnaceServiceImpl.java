@@ -1,14 +1,14 @@
 package com.aim.duty.duty_base.service;
 
 import com.aim.duty.duty_base.cache.config.FuelConfigCache;
-import com.aim.duty.duty_base.entity.bo.Forge;
+import com.aim.duty.duty_base.entity.bo.Furnace;
 import com.aim.duty.duty_base.entity.config.FuelConfig;
 import com.aim.duty.duty_base.util.Util;
 
-public class ServiceImpl implements Service{
+public class FurnaceServiceImpl implements FurnaceService{
 
 	@Override
-	public void addFuel(Forge forge, int propId, int num) {
+	public void addFuel(Furnace forge, int propId, int num) {
 		int readyFuelId = forge.getReadyFuelId();
 		if (readyFuelId == propId) {
 			forge.setReadyFuelNum(forge.getReadyFuelNum() + num);
@@ -19,7 +19,7 @@ public class ServiceImpl implements Service{
 	}
 
 	@Override
-	public void updateTemperature(Forge forge) {
+	public void updateTemperature(Furnace forge) {
 		// TODO Auto-generated method stub
 		int nowTime = Util.getTime2();
 

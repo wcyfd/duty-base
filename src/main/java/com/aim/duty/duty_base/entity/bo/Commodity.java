@@ -36,4 +36,14 @@ public class Commodity extends AbstractProp {
 	public void setProp(AbstractProp prop) {
 		this.prop = prop;
 	}
+
+	@Override
+	public Commodity clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		Commodity commodity = (Commodity) super.clone();
+		if (prop != null) {
+			commodity.setProp(prop.clone());
+		}
+		return commodity;
+	}
 }

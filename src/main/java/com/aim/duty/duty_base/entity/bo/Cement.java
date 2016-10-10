@@ -27,5 +27,13 @@ public class Cement extends AbstractMagicProp {
 		return Constant.CEMENT;
 	}
 	
+	@Override
+	public Cement clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		Cement cement = (Cement)super.clone();
+		
+		return cement;
+	}
+	
 
 }

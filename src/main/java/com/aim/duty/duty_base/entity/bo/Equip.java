@@ -25,5 +25,8 @@ public class Equip extends AbstractProp {
 		// TODO Auto-generated method stub
 		return Constant.EQUIP;
 	}
+	
+	
+	
 
 }

@@ -1,6 +1,5 @@
 package com.aim.duty.duty_base.entity.bo;
 
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -48,6 +47,25 @@ public class Wall extends AbstractProp {
 
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
+	}
+
+	@Override
+	public Wall clone() throws CloneNotSupportedException {
+		Wall wall = (Wall) super.clone();
+		wall.brickList = new TreeMap<>();
+		wall.cementList = new TreeMap<>();
+
+		for (Map.Entry<Integer, Brick> entrySet : brickList.entrySet()) {
+			int index = entrySet.getKey();
+			Brick brick = entrySet.getValue().clone();
+			wall.brickList.put(index, brick);
+		}
+		for (Map.Entry<Integer, Cement> entrySet : cementList.entrySet()) {
+			int index = entrySet.getKey();
+			Cement cement = entrySet.getValue().clone();
+			wall.cementList.put(index, cement);
+		}
+		return wall;
 	}
 
 }

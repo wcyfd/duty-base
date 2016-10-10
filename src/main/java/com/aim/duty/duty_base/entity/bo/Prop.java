@@ -36,4 +36,10 @@ public class Prop extends AbstractProp {
 		return Constant.PROP;
 	}
 
+	@Override
+	public Prop clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return (Prop) super.clone();
+	}
+
 }

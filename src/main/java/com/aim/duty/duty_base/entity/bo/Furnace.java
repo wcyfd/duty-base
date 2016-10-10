@@ -3,7 +3,7 @@ package com.aim.duty.duty_base.entity.bo;
 import com.aim.duty.duty_base.entity.base.AbstractProp;
 import com.aim.duty.duty_base.entity.base.Constant;
 
-public class Forge extends AbstractProp {
+public class Furnace extends AbstractProp {
 
 	private int temperature;
 	private int burnStartTime;
@@ -13,7 +13,7 @@ public class Forge extends AbstractProp {
 	private int readyFuelNum;
 	private Equip equip = null;
 
-	public Forge() {
+	public Furnace() {
 		// TODO Auto-generated constructor stub
 		burnFuelId = -1;
 		readyFuelId = -1;

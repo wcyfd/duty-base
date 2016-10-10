@@ -11,7 +11,7 @@ public abstract class AbstractMagicProp extends AbstractProp {
 	/** 魔法总计 */
 	private Map<Integer, Magic> magicMap = new HashMap<>();
 	/** 魔法集 */
-	private Map<Integer, Set<Magic>> magicDetailMap = new HashMap<>();
+	private Map<Integer, Set<Magic>> magicDetailMap =new HashMap<>();
 
 	public Map<Integer, Magic> getMagicMap() {
 		return magicMap;
@@ -69,6 +69,21 @@ public abstract class AbstractMagicProp extends AbstractProp {
 				magic.setValue(magic.getValue() + value);
 			}
 		}
+	}
+
+	@Override
+	public AbstractMagicProp clone() throws CloneNotSupportedException {
+		AbstractMagicProp magicProp = (AbstractMagicProp) super.clone();
+		magicProp.magicDetailMap = new HashMap<>();
+		magicProp.magicMap = new HashMap<>();
+		
+		for (Set<Magic> magics : magicDetailMap.values()) {
+			for (Magic magic : magics) {
+				Magic cloneMagic = magic.clone();
+				magicProp.addMagic(cloneMagic);
+			}
+		}
+		return magicProp;
 	}
 
 }

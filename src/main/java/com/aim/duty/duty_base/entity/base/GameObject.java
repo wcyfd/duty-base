@@ -1,13 +1,11 @@
 package com.aim.duty.duty_base.entity.base;
 
-public abstract class GameObject {
+public abstract class GameObject implements Cloneable {
 
-	private boolean change;
+	
 
-	public abstract boolean isChange();
-
-	public void setChange(boolean change) {
-		this.change = change;
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
-
 }

@@ -26,5 +26,11 @@ public class Brick extends AbstractMagicProp {
 		// TODO Auto-generated method stub
 		return Constant.BRICK;
 	}
+	
+	@Override
+	public Brick clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return (Brick)super.clone();
+	}
 
 }
