@@ -45,14 +45,13 @@ public class Brick extends AbstractMagicProp {
 	public void deserialize(ByteString data) {
 		// TODO Auto-generated method stub
 		try {
-			Serial.Brick ser = Serial.Brick.parseFrom(data);
-			this.setMineId(ser.getMineId());
-			super.deserialize(ser.getSuperClassData());
+			Serial.Brick serBrick = Serial.Brick.parseFrom(data);
+			this.setMineId(serBrick.getMineId());
+			super.deserialize(serBrick.getSuperClassData());
 		} catch (InvalidProtocolBufferException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		super.deserialize(data);
 	}
 
 }

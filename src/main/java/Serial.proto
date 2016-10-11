@@ -17,10 +17,11 @@ message AbstractProp{
 
 message AbstractMagicProp{
 	bytes superClassData=1;
-	map<int32,bytes> magicDetailMap=2;
-	map<int32,bytes> magicMap=3;
+	message MagicSet{
+		repeated bytes magics=1;
+	}
+	map<int32,MagicSet> magicDetails=2;
 }
-
 
 message Magic{
 	bytes superClassData=1;
@@ -32,4 +33,15 @@ message Magic{
 message Brick{
 	bytes superClassData=1;
 	int32 mineId=2;
+}
+
+message Cement{
+	bytes superClassData=1;
+	int32 mineId=2;
+}
+
+message Prop{
+	bytes superClassData=1;
+	int32 num=2;
+	int32 propId=3;
 }

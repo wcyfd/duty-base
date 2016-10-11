@@ -1506,71 +1506,37 @@ public final class Serial {
     com.google.protobuf.ByteString getSuperClassData();
 
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
-    int getMagicDetailMapCount();
+    int getMagicDetailsCount();
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
-    boolean containsMagicDetailMap(
+    boolean containsMagicDetails(
         int key);
     /**
-     * Use {@link #getMagicDetailMapMap()} instead.
+     * Use {@link #getMagicDetailsMap()} instead.
      */
     @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
-    getMagicDetailMap();
+    java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+    getMagicDetails();
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
-    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
-    getMagicDetailMapMap();
+    java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+    getMagicDetailsMap();
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
 
-    com.google.protobuf.ByteString getMagicDetailMapOrDefault(
+    com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getMagicDetailsOrDefault(
         int key,
-        com.google.protobuf.ByteString defaultValue);
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet defaultValue);
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
 
-    com.google.protobuf.ByteString getMagicDetailMapOrThrow(
-        int key);
-
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-    int getMagicMapCount();
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-    boolean containsMagicMap(
-        int key);
-    /**
-     * Use {@link #getMagicMapMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
-    getMagicMap();
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
-    getMagicMapMap();
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-
-    com.google.protobuf.ByteString getMagicMapOrDefault(
-        int key,
-        com.google.protobuf.ByteString defaultValue);
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-
-    com.google.protobuf.ByteString getMagicMapOrThrow(
+    com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getMagicDetailsOrThrow(
         int key);
   }
   /**
@@ -1620,26 +1586,14 @@ public final class Serial {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                magicDetailMap_ = com.google.protobuf.MapField.newMapField(
-                    MagicDetailMapDefaultEntryHolder.defaultEntry);
+                magicDetails_ = com.google.protobuf.MapField.newMapField(
+                    MagicDetailsDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
               }
-              com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
-              magicDetailMap = input.readMessage(
-                  MagicDetailMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              magicDetailMap_.getMutableMap().put(magicDetailMap.getKey(), magicDetailMap.getValue());
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                magicMap_ = com.google.protobuf.MapField.newMapField(
-                    MagicMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
-              magicMap = input.readMessage(
-                  MagicMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              magicMap_.getMutableMap().put(magicMap.getKey(), magicMap.getValue());
+              com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+              magicDetails = input.readMessage(
+                  MagicDetailsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              magicDetails_.getMutableMap().put(magicDetails.getKey(), magicDetails.getValue());
               break;
             }
           }
@@ -1663,9 +1617,7 @@ public final class Serial {
         int number) {
       switch (number) {
         case 2:
-          return internalGetMagicDetailMap();
-        case 3:
-          return internalGetMagicMap();
+          return internalGetMagicDetails();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -1678,6 +1630,528 @@ public final class Serial {
               com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.class, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.Builder.class);
     }
 
+    public interface MagicSetOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated bytes magics = 1;</code>
+       */
+      java.util.List<com.google.protobuf.ByteString> getMagicsList();
+      /**
+       * <code>repeated bytes magics = 1;</code>
+       */
+      int getMagicsCount();
+      /**
+       * <code>repeated bytes magics = 1;</code>
+       */
+      com.google.protobuf.ByteString getMagics(int index);
+    }
+    /**
+     * Protobuf type {@code com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet}
+     */
+    public  static final class MagicSet extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet)
+        MagicSetOrBuilder {
+      // Use MagicSet.newBuilder() to construct.
+      private MagicSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MagicSet() {
+        magics_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      }
+      private MagicSet(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        int mutable_bitField0_ = 0;
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!input.skipField(tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  magics_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                magics_.add(input.readBytes());
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            magics_ = java.util.Collections.unmodifiableList(magics_);
+          }
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.class, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.Builder.class);
+      }
+
+      public static final int MAGICS_FIELD_NUMBER = 1;
+      private java.util.List<com.google.protobuf.ByteString> magics_;
+      /**
+       * <code>repeated bytes magics = 1;</code>
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getMagicsList() {
+        return magics_;
+      }
+      /**
+       * <code>repeated bytes magics = 1;</code>
+       */
+      public int getMagicsCount() {
+        return magics_.size();
+      }
+      /**
+       * <code>repeated bytes magics = 1;</code>
+       */
+      public com.google.protobuf.ByteString getMagics(int index) {
+        return magics_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < magics_.size(); i++) {
+          output.writeBytes(1, magics_.get(i));
+        }
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < magics_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeBytesSizeNoTag(magics_.get(i));
+          }
+          size += dataSize;
+          size += 1 * getMagicsList().size();
+        }
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet)) {
+          return super.equals(obj);
+        }
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet other = (com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet) obj;
+
+        boolean result = true;
+        result = result && getMagicsList()
+            .equals(other.getMagicsList());
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptorForType().hashCode();
+        if (getMagicsCount() > 0) {
+          hash = (37 * hash) + MAGICS_FIELD_NUMBER;
+          hash = (53 * hash) + getMagicsList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet)
+          com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSetOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.class, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.Builder.class);
+        }
+
+        // Construct using com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          magics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_descriptor;
+        }
+
+        public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getDefaultInstanceForType() {
+          return com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.getDefaultInstance();
+        }
+
+        public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet build() {
+          com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet buildPartial() {
+          com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet result = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            magics_ = java.util.Collections.unmodifiableList(magics_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.magics_ = magics_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet) {
+            return mergeFrom((com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet other) {
+          if (other == com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.getDefaultInstance()) return this;
+          if (!other.magics_.isEmpty()) {
+            if (magics_.isEmpty()) {
+              magics_ = other.magics_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMagicsIsMutable();
+              magics_.addAll(other.magics_);
+            }
+            onChanged();
+          }
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<com.google.protobuf.ByteString> magics_ = java.util.Collections.emptyList();
+        private void ensureMagicsIsMutable() {
+          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+            magics_ = new java.util.ArrayList<com.google.protobuf.ByteString>(magics_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated bytes magics = 1;</code>
+         */
+        public java.util.List<com.google.protobuf.ByteString>
+            getMagicsList() {
+          return java.util.Collections.unmodifiableList(magics_);
+        }
+        /**
+         * <code>repeated bytes magics = 1;</code>
+         */
+        public int getMagicsCount() {
+          return magics_.size();
+        }
+        /**
+         * <code>repeated bytes magics = 1;</code>
+         */
+        public com.google.protobuf.ByteString getMagics(int index) {
+          return magics_.get(index);
+        }
+        /**
+         * <code>repeated bytes magics = 1;</code>
+         */
+        public Builder setMagics(
+            int index, com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMagicsIsMutable();
+          magics_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated bytes magics = 1;</code>
+         */
+        public Builder addMagics(com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMagicsIsMutable();
+          magics_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated bytes magics = 1;</code>
+         */
+        public Builder addAllMagics(
+            java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+          ensureMagicsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, magics_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated bytes magics = 1;</code>
+         */
+        public Builder clearMagics() {
+          magics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet)
+      }
+
+      // @@protoc_insertion_point(class_scope:com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet)
+      private static final com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet();
+      }
+
+      public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MagicSet>
+          PARSER = new com.google.protobuf.AbstractParser<MagicSet>() {
+        public MagicSet parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new MagicSet(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MagicSet> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MagicSet> getParserForType() {
+        return PARSER;
+      }
+
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int bitField0_;
     public static final int SUPERCLASSDATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString superClassData_;
@@ -1688,152 +2162,76 @@ public final class Serial {
       return superClassData_;
     }
 
-    public static final int MAGICDETAILMAP_FIELD_NUMBER = 2;
-    private static final class MagicDetailMapDefaultEntryHolder {
+    public static final int MAGICDETAILS_FIELD_NUMBER = 2;
+    private static final class MagicDetailsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
-          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+          java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> defaultEntry =
               com.google.protobuf.MapEntry
-              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
-                  com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailMapEntry_descriptor, 
+              .<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>newDefaultInstance(
+                  com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.INT32,
                   0,
-                  com.google.protobuf.WireFormat.FieldType.BYTES,
-                  com.google.protobuf.ByteString.EMPTY);
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.getDefaultInstance());
     }
     private com.google.protobuf.MapField<
-        java.lang.Integer, com.google.protobuf.ByteString> magicDetailMap_;
-    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
-    internalGetMagicDetailMap() {
-      if (magicDetailMap_ == null) {
+        java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> magicDetails_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+    internalGetMagicDetails() {
+      if (magicDetails_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            MagicDetailMapDefaultEntryHolder.defaultEntry);
+            MagicDetailsDefaultEntryHolder.defaultEntry);
       }
-      return magicDetailMap_;
+      return magicDetails_;
     }
 
-    public int getMagicDetailMapCount() {
-      return internalGetMagicDetailMap().getMap().size();
+    public int getMagicDetailsCount() {
+      return internalGetMagicDetails().getMap().size();
     }
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
 
-    public boolean containsMagicDetailMap(
+    public boolean containsMagicDetails(
         int key) {
       
-      return internalGetMagicDetailMap().getMap().containsKey(key);
+      return internalGetMagicDetails().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getMagicDetailMapMap()} instead.
+     * Use {@link #getMagicDetailsMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicDetailMap() {
-      return getMagicDetailMapMap();
+    public java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> getMagicDetails() {
+      return getMagicDetailsMap();
     }
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
 
-    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicDetailMapMap() {
-      return internalGetMagicDetailMap().getMap();
+    public java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> getMagicDetailsMap() {
+      return internalGetMagicDetails().getMap();
     }
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
 
-    public com.google.protobuf.ByteString getMagicDetailMapOrDefault(
+    public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getMagicDetailsOrDefault(
         int key,
-        com.google.protobuf.ByteString defaultValue) {
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet defaultValue) {
       
-      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-          internalGetMagicDetailMap().getMap();
+      java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> map =
+          internalGetMagicDetails().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+     * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
      */
 
-    public com.google.protobuf.ByteString getMagicDetailMapOrThrow(
+    public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getMagicDetailsOrThrow(
         int key) {
       
-      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-          internalGetMagicDetailMap().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int MAGICMAP_FIELD_NUMBER = 3;
-    private static final class MagicMapDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
-                  com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicMapEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.INT32,
-                  0,
-                  com.google.protobuf.WireFormat.FieldType.BYTES,
-                  com.google.protobuf.ByteString.EMPTY);
-    }
-    private com.google.protobuf.MapField<
-        java.lang.Integer, com.google.protobuf.ByteString> magicMap_;
-    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
-    internalGetMagicMap() {
-      if (magicMap_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            MagicMapDefaultEntryHolder.defaultEntry);
-      }
-      return magicMap_;
-    }
-
-    public int getMagicMapCount() {
-      return internalGetMagicMap().getMap().size();
-    }
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-
-    public boolean containsMagicMap(
-        int key) {
-      
-      return internalGetMagicMap().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getMagicMapMap()} instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicMap() {
-      return getMagicMapMap();
-    }
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-
-    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicMapMap() {
-      return internalGetMagicMap().getMap();
-    }
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-
-    public com.google.protobuf.ByteString getMagicMapOrDefault(
-        int key,
-        com.google.protobuf.ByteString defaultValue) {
-      
-      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-          internalGetMagicMap().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-     */
-
-    public com.google.protobuf.ByteString getMagicMapOrThrow(
-        int key) {
-      
-      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-          internalGetMagicMap().getMap();
+      java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> map =
+          internalGetMagicDetails().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -1855,23 +2253,14 @@ public final class Serial {
       if (!superClassData_.isEmpty()) {
         output.writeBytes(1, superClassData_);
       }
-      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
-           : internalGetMagicDetailMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
-        magicDetailMap = MagicDetailMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+      for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> entry
+           : internalGetMagicDetails().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+        magicDetails = MagicDetailsDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
-        output.writeMessage(2, magicDetailMap);
-      }
-      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
-           : internalGetMagicMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
-        magicMap = MagicMapDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        output.writeMessage(3, magicMap);
+        output.writeMessage(2, magicDetails);
       }
     }
 
@@ -1884,25 +2273,15 @@ public final class Serial {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, superClassData_);
       }
-      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
-           : internalGetMagicDetailMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
-        magicDetailMap = MagicDetailMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+      for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> entry
+           : internalGetMagicDetails().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+        magicDetails = MagicDetailsDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, magicDetailMap);
-      }
-      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
-           : internalGetMagicMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
-        magicMap = MagicMapDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, magicMap);
+            .computeMessageSize(2, magicDetails);
       }
       memoizedSize = size;
       return size;
@@ -1922,10 +2301,8 @@ public final class Serial {
       boolean result = true;
       result = result && getSuperClassData()
           .equals(other.getSuperClassData());
-      result = result && internalGetMagicDetailMap().equals(
-          other.internalGetMagicDetailMap());
-      result = result && internalGetMagicMap().equals(
-          other.internalGetMagicMap());
+      result = result && internalGetMagicDetails().equals(
+          other.internalGetMagicDetails());
       return result;
     }
 
@@ -1938,13 +2315,9 @@ public final class Serial {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + SUPERCLASSDATA_FIELD_NUMBER;
       hash = (53 * hash) + getSuperClassData().hashCode();
-      if (!internalGetMagicDetailMap().getMap().isEmpty()) {
-        hash = (37 * hash) + MAGICDETAILMAP_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetMagicDetailMap().hashCode();
-      }
-      if (!internalGetMagicMap().getMap().isEmpty()) {
-        hash = (37 * hash) + MAGICMAP_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetMagicMap().hashCode();
+      if (!internalGetMagicDetails().getMap().isEmpty()) {
+        hash = (37 * hash) + MAGICDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMagicDetails().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2045,9 +2418,7 @@ public final class Serial {
           int number) {
         switch (number) {
           case 2:
-            return internalGetMagicDetailMap();
-          case 3:
-            return internalGetMagicMap();
+            return internalGetMagicDetails();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -2058,9 +2429,7 @@ public final class Serial {
           int number) {
         switch (number) {
           case 2:
-            return internalGetMutableMagicDetailMap();
-          case 3:
-            return internalGetMutableMagicMap();
+            return internalGetMutableMagicDetails();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -2092,8 +2461,7 @@ public final class Serial {
         super.clear();
         superClassData_ = com.google.protobuf.ByteString.EMPTY;
 
-        internalGetMutableMagicDetailMap().clear();
-        internalGetMutableMagicMap().clear();
+        internalGetMutableMagicDetails().clear();
         return this;
       }
 
@@ -2119,10 +2487,8 @@ public final class Serial {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.superClassData_ = superClassData_;
-        result.magicDetailMap_ = internalGetMagicDetailMap();
-        result.magicDetailMap_.makeImmutable();
-        result.magicMap_ = internalGetMagicMap();
-        result.magicMap_.makeImmutable();
+        result.magicDetails_ = internalGetMagicDetails();
+        result.magicDetails_.makeImmutable();
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2168,10 +2534,8 @@ public final class Serial {
         if (other.getSuperClassData() != com.google.protobuf.ByteString.EMPTY) {
           setSuperClassData(other.getSuperClassData());
         }
-        internalGetMutableMagicDetailMap().mergeFrom(
-            other.internalGetMagicDetailMap());
-        internalGetMutableMagicMap().mergeFrom(
-            other.internalGetMagicMap());
+        internalGetMutableMagicDetails().mergeFrom(
+            other.internalGetMagicDetails());
         onChanged();
         return this;
       }
@@ -2229,240 +2593,121 @@ public final class Serial {
       }
 
       private com.google.protobuf.MapField<
-          java.lang.Integer, com.google.protobuf.ByteString> magicDetailMap_;
-      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
-      internalGetMagicDetailMap() {
-        if (magicDetailMap_ == null) {
+          java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> magicDetails_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+      internalGetMagicDetails() {
+        if (magicDetails_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              MagicDetailMapDefaultEntryHolder.defaultEntry);
+              MagicDetailsDefaultEntryHolder.defaultEntry);
         }
-        return magicDetailMap_;
+        return magicDetails_;
       }
-      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
-      internalGetMutableMagicDetailMap() {
+      private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+      internalGetMutableMagicDetails() {
         onChanged();;
-        if (magicDetailMap_ == null) {
-          magicDetailMap_ = com.google.protobuf.MapField.newMapField(
-              MagicDetailMapDefaultEntryHolder.defaultEntry);
+        if (magicDetails_ == null) {
+          magicDetails_ = com.google.protobuf.MapField.newMapField(
+              MagicDetailsDefaultEntryHolder.defaultEntry);
         }
-        if (!magicDetailMap_.isMutable()) {
-          magicDetailMap_ = magicDetailMap_.copy();
+        if (!magicDetails_.isMutable()) {
+          magicDetails_ = magicDetails_.copy();
         }
-        return magicDetailMap_;
+        return magicDetails_;
       }
 
-      public int getMagicDetailMapCount() {
-        return internalGetMagicDetailMap().getMap().size();
+      public int getMagicDetailsCount() {
+        return internalGetMagicDetails().getMap().size();
       }
       /**
-       * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+       * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
        */
 
-      public boolean containsMagicDetailMap(
+      public boolean containsMagicDetails(
           int key) {
         
-        return internalGetMagicDetailMap().getMap().containsKey(key);
+        return internalGetMagicDetails().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getMagicDetailMapMap()} instead.
+       * Use {@link #getMagicDetailsMap()} instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicDetailMap() {
-        return getMagicDetailMapMap();
+      public java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> getMagicDetails() {
+        return getMagicDetailsMap();
       }
       /**
-       * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+       * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
        */
 
-      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicDetailMapMap() {
-        return internalGetMagicDetailMap().getMap();
+      public java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> getMagicDetailsMap() {
+        return internalGetMagicDetails().getMap();
       }
       /**
-       * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+       * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
        */
 
-      public com.google.protobuf.ByteString getMagicDetailMapOrDefault(
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getMagicDetailsOrDefault(
           int key,
-          com.google.protobuf.ByteString defaultValue) {
+          com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet defaultValue) {
         
-        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-            internalGetMagicDetailMap().getMap();
+        java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> map =
+            internalGetMagicDetails().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+       * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
        */
 
-      public com.google.protobuf.ByteString getMagicDetailMapOrThrow(
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet getMagicDetailsOrThrow(
           int key) {
         
-        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-            internalGetMagicDetailMap().getMap();
+        java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> map =
+            internalGetMagicDetails().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
 
-      public Builder clearMagicDetailMap() {
-        getMutableMagicDetailMap().clear();
+      public Builder clearMagicDetails() {
+        getMutableMagicDetails().clear();
         return this;
       }
       /**
-       * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+       * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
        */
 
-      public Builder removeMagicDetailMap(
+      public Builder removeMagicDetails(
           int key) {
         
-        getMutableMagicDetailMap().remove(key);
+        getMutableMagicDetails().remove(key);
         return this;
       }
       /**
        * Use alternate mutation accessors instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
-      getMutableMagicDetailMap() {
-        return internalGetMutableMagicDetailMap().getMutableMap();
+      public java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet>
+      getMutableMagicDetails() {
+        return internalGetMutableMagicDetails().getMutableMap();
       }
       /**
-       * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+       * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
        */
-      public Builder putMagicDetailMap(
+      public Builder putMagicDetails(
           int key,
-          com.google.protobuf.ByteString value) {
+          com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet value) {
         
         if (value == null) { throw new java.lang.NullPointerException(); }
-        getMutableMagicDetailMap().put(key, value);
+        getMutableMagicDetails().put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;int32, bytes&gt; magicDetailMap = 2;</code>
+       * <code>map&lt;int32, .com.aim.duty.duty_base.entity.protobuf.serial.AbstractMagicProp.MagicSet&gt; magicDetails = 2;</code>
        */
 
-      public Builder putAllMagicDetailMap(
-          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
-        getMutableMagicDetailMap().putAll(values);
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.Integer, com.google.protobuf.ByteString> magicMap_;
-      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
-      internalGetMagicMap() {
-        if (magicMap_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              MagicMapDefaultEntryHolder.defaultEntry);
-        }
-        return magicMap_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
-      internalGetMutableMagicMap() {
-        onChanged();;
-        if (magicMap_ == null) {
-          magicMap_ = com.google.protobuf.MapField.newMapField(
-              MagicMapDefaultEntryHolder.defaultEntry);
-        }
-        if (!magicMap_.isMutable()) {
-          magicMap_ = magicMap_.copy();
-        }
-        return magicMap_;
-      }
-
-      public int getMagicMapCount() {
-        return internalGetMagicMap().getMap().size();
-      }
-      /**
-       * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-       */
-
-      public boolean containsMagicMap(
-          int key) {
-        
-        return internalGetMagicMap().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getMagicMapMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicMap() {
-        return getMagicMapMap();
-      }
-      /**
-       * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-       */
-
-      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMagicMapMap() {
-        return internalGetMagicMap().getMap();
-      }
-      /**
-       * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-       */
-
-      public com.google.protobuf.ByteString getMagicMapOrDefault(
-          int key,
-          com.google.protobuf.ByteString defaultValue) {
-        
-        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-            internalGetMagicMap().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-       */
-
-      public com.google.protobuf.ByteString getMagicMapOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
-            internalGetMagicMap().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearMagicMap() {
-        getMutableMagicMap().clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-       */
-
-      public Builder removeMagicMap(
-          int key) {
-        
-        getMutableMagicMap().remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
-      getMutableMagicMap() {
-        return internalGetMutableMagicMap().getMutableMap();
-      }
-      /**
-       * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-       */
-      public Builder putMagicMap(
-          int key,
-          com.google.protobuf.ByteString value) {
-        
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        getMutableMagicMap().put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;int32, bytes&gt; magicMap = 3;</code>
-       */
-
-      public Builder putAllMagicMap(
-          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
-        getMutableMagicMap().putAll(values);
+      public Builder putAllMagicDetails(
+          java.util.Map<java.lang.Integer, com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet> values) {
+        getMutableMagicDetails().putAll(values);
         return this;
       }
       public final Builder setUnknownFields(
@@ -3630,6 +3875,1059 @@ public final class Serial {
 
   }
 
+  public interface CementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.aim.duty.duty_base.entity.protobuf.serial.Cement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bytes superClassData = 1;</code>
+     */
+    com.google.protobuf.ByteString getSuperClassData();
+
+    /**
+     * <code>optional int32 mineId = 2;</code>
+     */
+    int getMineId();
+  }
+  /**
+   * Protobuf type {@code com.aim.duty.duty_base.entity.protobuf.serial.Cement}
+   */
+  public  static final class Cement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.aim.duty.duty_base.entity.protobuf.serial.Cement)
+      CementOrBuilder {
+    // Use Cement.newBuilder() to construct.
+    private Cement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Cement() {
+      superClassData_ = com.google.protobuf.ByteString.EMPTY;
+      mineId_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Cement(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+
+              superClassData_ = input.readBytes();
+              break;
+            }
+            case 16: {
+
+              mineId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement.class, com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement.Builder.class);
+    }
+
+    public static final int SUPERCLASSDATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString superClassData_;
+    /**
+     * <code>optional bytes superClassData = 1;</code>
+     */
+    public com.google.protobuf.ByteString getSuperClassData() {
+      return superClassData_;
+    }
+
+    public static final int MINEID_FIELD_NUMBER = 2;
+    private int mineId_;
+    /**
+     * <code>optional int32 mineId = 2;</code>
+     */
+    public int getMineId() {
+      return mineId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!superClassData_.isEmpty()) {
+        output.writeBytes(1, superClassData_);
+      }
+      if (mineId_ != 0) {
+        output.writeInt32(2, mineId_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!superClassData_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, superClassData_);
+      }
+      if (mineId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, mineId_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement)) {
+        return super.equals(obj);
+      }
+      com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement other = (com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement) obj;
+
+      boolean result = true;
+      result = result && getSuperClassData()
+          .equals(other.getSuperClassData());
+      result = result && (getMineId()
+          == other.getMineId());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + SUPERCLASSDATA_FIELD_NUMBER;
+      hash = (53 * hash) + getSuperClassData().hashCode();
+      hash = (37 * hash) + MINEID_FIELD_NUMBER;
+      hash = (53 * hash) + getMineId();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.aim.duty.duty_base.entity.protobuf.serial.Cement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.aim.duty.duty_base.entity.protobuf.serial.Cement)
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.CementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement.class, com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement.Builder.class);
+      }
+
+      // Construct using com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        superClassData_ = com.google.protobuf.ByteString.EMPTY;
+
+        mineId_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_descriptor;
+      }
+
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement getDefaultInstanceForType() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement.getDefaultInstance();
+      }
+
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement build() {
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement buildPartial() {
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement result = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement(this);
+        result.superClassData_ = superClassData_;
+        result.mineId_ = mineId_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement) {
+          return mergeFrom((com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement other) {
+        if (other == com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement.getDefaultInstance()) return this;
+        if (other.getSuperClassData() != com.google.protobuf.ByteString.EMPTY) {
+          setSuperClassData(other.getSuperClassData());
+        }
+        if (other.getMineId() != 0) {
+          setMineId(other.getMineId());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString superClassData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes superClassData = 1;</code>
+       */
+      public com.google.protobuf.ByteString getSuperClassData() {
+        return superClassData_;
+      }
+      /**
+       * <code>optional bytes superClassData = 1;</code>
+       */
+      public Builder setSuperClassData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        superClassData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes superClassData = 1;</code>
+       */
+      public Builder clearSuperClassData() {
+        
+        superClassData_ = getDefaultInstance().getSuperClassData();
+        onChanged();
+        return this;
+      }
+
+      private int mineId_ ;
+      /**
+       * <code>optional int32 mineId = 2;</code>
+       */
+      public int getMineId() {
+        return mineId_;
+      }
+      /**
+       * <code>optional int32 mineId = 2;</code>
+       */
+      public Builder setMineId(int value) {
+        
+        mineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 mineId = 2;</code>
+       */
+      public Builder clearMineId() {
+        
+        mineId_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.aim.duty.duty_base.entity.protobuf.serial.Cement)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.aim.duty.duty_base.entity.protobuf.serial.Cement)
+    private static final com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement();
+    }
+
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Cement>
+        PARSER = new com.google.protobuf.AbstractParser<Cement>() {
+      public Cement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Cement(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Cement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Cement> getParserForType() {
+      return PARSER;
+    }
+
+    public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Cement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PropOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.aim.duty.duty_base.entity.protobuf.serial.Prop)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bytes superClassData = 1;</code>
+     */
+    com.google.protobuf.ByteString getSuperClassData();
+
+    /**
+     * <code>optional int32 num = 2;</code>
+     */
+    int getNum();
+
+    /**
+     * <code>optional int32 propId = 3;</code>
+     */
+    int getPropId();
+  }
+  /**
+   * Protobuf type {@code com.aim.duty.duty_base.entity.protobuf.serial.Prop}
+   */
+  public  static final class Prop extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.aim.duty.duty_base.entity.protobuf.serial.Prop)
+      PropOrBuilder {
+    // Use Prop.newBuilder() to construct.
+    private Prop(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Prop() {
+      superClassData_ = com.google.protobuf.ByteString.EMPTY;
+      num_ = 0;
+      propId_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Prop(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+
+              superClassData_ = input.readBytes();
+              break;
+            }
+            case 16: {
+
+              num_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              propId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop.class, com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop.Builder.class);
+    }
+
+    public static final int SUPERCLASSDATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString superClassData_;
+    /**
+     * <code>optional bytes superClassData = 1;</code>
+     */
+    public com.google.protobuf.ByteString getSuperClassData() {
+      return superClassData_;
+    }
+
+    public static final int NUM_FIELD_NUMBER = 2;
+    private int num_;
+    /**
+     * <code>optional int32 num = 2;</code>
+     */
+    public int getNum() {
+      return num_;
+    }
+
+    public static final int PROPID_FIELD_NUMBER = 3;
+    private int propId_;
+    /**
+     * <code>optional int32 propId = 3;</code>
+     */
+    public int getPropId() {
+      return propId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!superClassData_.isEmpty()) {
+        output.writeBytes(1, superClassData_);
+      }
+      if (num_ != 0) {
+        output.writeInt32(2, num_);
+      }
+      if (propId_ != 0) {
+        output.writeInt32(3, propId_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!superClassData_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, superClassData_);
+      }
+      if (num_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, num_);
+      }
+      if (propId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, propId_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop)) {
+        return super.equals(obj);
+      }
+      com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop other = (com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop) obj;
+
+      boolean result = true;
+      result = result && getSuperClassData()
+          .equals(other.getSuperClassData());
+      result = result && (getNum()
+          == other.getNum());
+      result = result && (getPropId()
+          == other.getPropId());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + SUPERCLASSDATA_FIELD_NUMBER;
+      hash = (53 * hash) + getSuperClassData().hashCode();
+      hash = (37 * hash) + NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getNum();
+      hash = (37 * hash) + PROPID_FIELD_NUMBER;
+      hash = (53 * hash) + getPropId();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.aim.duty.duty_base.entity.protobuf.serial.Prop}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.aim.duty.duty_base.entity.protobuf.serial.Prop)
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.PropOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop.class, com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop.Builder.class);
+      }
+
+      // Construct using com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        superClassData_ = com.google.protobuf.ByteString.EMPTY;
+
+        num_ = 0;
+
+        propId_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_descriptor;
+      }
+
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop getDefaultInstanceForType() {
+        return com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop.getDefaultInstance();
+      }
+
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop build() {
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop buildPartial() {
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop result = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop(this);
+        result.superClassData_ = superClassData_;
+        result.num_ = num_;
+        result.propId_ = propId_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop) {
+          return mergeFrom((com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop other) {
+        if (other == com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop.getDefaultInstance()) return this;
+        if (other.getSuperClassData() != com.google.protobuf.ByteString.EMPTY) {
+          setSuperClassData(other.getSuperClassData());
+        }
+        if (other.getNum() != 0) {
+          setNum(other.getNum());
+        }
+        if (other.getPropId() != 0) {
+          setPropId(other.getPropId());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString superClassData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes superClassData = 1;</code>
+       */
+      public com.google.protobuf.ByteString getSuperClassData() {
+        return superClassData_;
+      }
+      /**
+       * <code>optional bytes superClassData = 1;</code>
+       */
+      public Builder setSuperClassData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        superClassData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes superClassData = 1;</code>
+       */
+      public Builder clearSuperClassData() {
+        
+        superClassData_ = getDefaultInstance().getSuperClassData();
+        onChanged();
+        return this;
+      }
+
+      private int num_ ;
+      /**
+       * <code>optional int32 num = 2;</code>
+       */
+      public int getNum() {
+        return num_;
+      }
+      /**
+       * <code>optional int32 num = 2;</code>
+       */
+      public Builder setNum(int value) {
+        
+        num_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 num = 2;</code>
+       */
+      public Builder clearNum() {
+        
+        num_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int propId_ ;
+      /**
+       * <code>optional int32 propId = 3;</code>
+       */
+      public int getPropId() {
+        return propId_;
+      }
+      /**
+       * <code>optional int32 propId = 3;</code>
+       */
+      public Builder setPropId(int value) {
+        
+        propId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 propId = 3;</code>
+       */
+      public Builder clearPropId() {
+        
+        propId_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.aim.duty.duty_base.entity.protobuf.serial.Prop)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.aim.duty.duty_base.entity.protobuf.serial.Prop)
+    private static final com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop();
+    }
+
+    public static com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Prop>
+        PARSER = new com.google.protobuf.AbstractParser<Prop>() {
+      public Prop parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Prop(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Prop> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Prop> getParserForType() {
+      return PARSER;
+    }
+
+    public com.aim.duty.duty_base.entity.protobuf.serial.Serial.Prop getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_GameObject_descriptor;
   private static final 
@@ -3651,15 +4949,15 @@ public final class Serial {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailMapEntry_descriptor;
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailMapEntry_fieldAccessorTable;
+      internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicMapEntry_descriptor;
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailsEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicMapEntry_fieldAccessorTable;
+      internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Magic_descriptor;
   private static final 
@@ -3670,6 +4968,16 @@ public final class Serial {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Brick_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3684,19 +4992,21 @@ public final class Serial {
       "ameEntity\022\026\n\016superClassData\030\001 \001(\014\022\016\n\006cha" +
       "nge\030\002 \001(\010\"Q\n\014AbstractProp\022\026\n\016superClassD" +
       "ata\030\001 \001(\014\022\n\n\002id\030\002 \001(\005\022\013\n\003num\030\003 \001(\005\022\020\n\010pr" +
-      "opType\030\004 \001(\005\"\343\002\n\021AbstractMagicProp\022\026\n\016su" +
-      "perClassData\030\001 \001(\014\022l\n\016magicDetailMap\030\002 \003" +
-      "(\0132T.com.aim.duty.duty_base.entity.proto" +
-      "buf.serial.AbstractMagicProp.MagicDetail" +
-      "MapEntry\022`\n\010magicMap\030\003 \003(\0132N.com.aim.dut",
-      "y.duty_base.entity.protobuf.serial.Abstr" +
-      "actMagicProp.MagicMapEntry\0325\n\023MagicDetai" +
-      "lMapEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\014:\0028" +
-      "\001\032/\n\rMagicMapEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value" +
-      "\030\002 \001(\014:\0028\001\"Q\n\005Magic\022\026\n\016superClassData\030\001 " +
-      "\001(\014\022\017\n\007magicId\030\002 \001(\005\022\020\n\010duration\030\003 \001(\005\022\r" +
-      "\n\005value\030\004 \001(\005\"/\n\005Brick\022\026\n\016superClassData" +
-      "\030\001 \001(\014\022\016\n\006mineId\030\002 \001(\005b\006proto3"
+      "opType\030\004 \001(\005\"\261\002\n\021AbstractMagicProp\022\026\n\016su" +
+      "perClassData\030\001 \001(\014\022h\n\014magicDetails\030\002 \003(\013" +
+      "2R.com.aim.duty.duty_base.entity.protobu" +
+      "f.serial.AbstractMagicProp.MagicDetailsE" +
+      "ntry\032\032\n\010MagicSet\022\016\n\006magics\030\001 \003(\014\032~\n\021Magi",
+      "cDetailsEntry\022\013\n\003key\030\001 \001(\005\022X\n\005value\030\002 \001(" +
+      "\0132I.com.aim.duty.duty_base.entity.protob" +
+      "uf.serial.AbstractMagicProp.MagicSet:\0028\001" +
+      "\"Q\n\005Magic\022\026\n\016superClassData\030\001 \001(\014\022\017\n\007mag" +
+      "icId\030\002 \001(\005\022\020\n\010duration\030\003 \001(\005\022\r\n\005value\030\004 " +
+      "\001(\005\"/\n\005Brick\022\026\n\016superClassData\030\001 \001(\014\022\016\n\006" +
+      "mineId\030\002 \001(\005\"0\n\006Cement\022\026\n\016superClassData" +
+      "\030\001 \001(\014\022\016\n\006mineId\030\002 \001(\005\";\n\004Prop\022\026\n\016superC" +
+      "lassData\030\001 \001(\014\022\013\n\003num\030\002 \001(\005\022\016\n\006propId\030\003 " +
+      "\001(\005b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3733,18 +5043,18 @@ public final class Serial {
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_descriptor,
-        new java.lang.String[] { "SuperClassData", "MagicDetailMap", "MagicMap", });
-    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailMapEntry_descriptor =
+        new java.lang.String[] { "SuperClassData", "MagicDetails", });
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_descriptor =
       internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_descriptor.getNestedTypes().get(0);
-    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailMapEntry_fieldAccessorTable = new
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailMapEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicMapEntry_descriptor =
+        internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicSet_descriptor,
+        new java.lang.String[] { "Magics", });
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailsEntry_descriptor =
       internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_descriptor.getNestedTypes().get(1);
-    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicMapEntry_fieldAccessorTable = new
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicMapEntry_descriptor,
+        internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_MagicDetailsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Magic_descriptor =
       getDescriptor().getMessageTypes().get(4);
@@ -3758,6 +5068,18 @@ public final class Serial {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Brick_descriptor,
         new java.lang.String[] { "SuperClassData", "MineId", });
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Cement_descriptor,
+        new java.lang.String[] { "SuperClassData", "MineId", });
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_aim_duty_duty_base_entity_protobuf_serial_Prop_descriptor,
+        new java.lang.String[] { "SuperClassData", "Num", "PropId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
