@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Set;
 
 import com.aim.duty.duty_base.entity.bo.Magic;
+import com.aim.duty.duty_base.entity.protobuf.serial.Serial;
+import com.google.protobuf.ByteString;
 
 public abstract class AbstractMagicProp extends AbstractProp {
 	/** 魔法总计 */
@@ -84,6 +86,21 @@ public abstract class AbstractMagicProp extends AbstractProp {
 			}
 		}
 		return magicProp;
+	}
+	
+	@Override
+	public ByteString serialize() {
+		// TODO Auto-generated method stub
+		for(Map.Entry<Integer, Set<Magic>> entrySet:magicDetailMap.entrySet()){
+			
+		}
+		return null;
+	}
+	
+	@Override
+	public void deserialize(ByteString data) {
+		// TODO Auto-generated method stub
+		super.deserialize(data);
 	}
 
 }

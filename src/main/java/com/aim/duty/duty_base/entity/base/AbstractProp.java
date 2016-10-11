@@ -1,5 +1,9 @@
 package com.aim.duty.duty_base.entity.base;
 
+import com.aim.duty.duty_base.entity.protobuf.serial.Serial;
+import com.google.protobuf.ByteString;
+import com.google.protobuf.InvalidProtocolBufferException;
+
 public abstract class AbstractProp extends GameEntity {
 
 	private int id;
@@ -39,5 +43,28 @@ public abstract class AbstractProp extends GameEntity {
 
 	@Override
 	public abstract boolean isChange();
+
+	@Override
+	public ByteString serialize() {
+		// TODO Auto-generated method stub
+		ByteString data = Serial.AbstractProp.newBuilder().setSuperClassData(super.serialize()).setId(id).setNum(num)
+				.setPropType(propType).build().toByteString();
+		return data;
+	}
+
+	@Override
+	public void deserialize(ByteString data) {
+		// TODO Auto-generated method stub
+		try {
+			Serial.AbstractProp ser = Serial.AbstractProp.parseFrom(data);
+			super.deserialize(ser.getSuperClassData());
+			this.setId(ser.getId());
+			this.setNum(ser.getNum());
+			this.propType = (byte) ser.getPropType();
+		} catch (InvalidProtocolBufferException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }
