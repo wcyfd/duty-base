@@ -1,0 +1,35 @@
+syntax = "proto3";
+package com.aim.duty.duty_base.entity.protobuf.serial;
+message GameObject{
+}
+
+message GameEntity{
+	bytes superClassData=1;
+	bool change=2;	
+}
+
+message AbstractProp{
+	bytes superClassData=1;
+	int32 id=2;
+	int32 num=3;
+	int32 propType=4;
+}
+
+message AbstractMagicProp{
+	bytes superClassData=1;
+	map<int32,bytes> magicDetailMap=2;
+	map<int32,bytes> magicMap=3;
+}
+
+
+message Magic{
+	bytes superClassData=1;
+	int32 magicId=2;
+	int32 duration=3;
+	int32 value=4;
+}
+
+message Brick{
+	bytes superClassData=1;
+	int32 mineId=2;
+}
