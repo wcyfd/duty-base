@@ -6,20 +6,11 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 public abstract class AbstractProp extends GameEntity {
 
-	private int id;
 	private int num;
 	protected byte propType = -1;
 
 	public AbstractProp() {
 		propType = propType == -1 ? getInitPropType() : this.propType;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public int getId() {
-		return id;
 	}
 
 	public int getNum() {
@@ -47,7 +38,7 @@ public abstract class AbstractProp extends GameEntity {
 	@Override
 	public ByteString serialize() {
 		// TODO Auto-generated method stub
-		ByteString data = Serial.AbstractProp.newBuilder().setSuperClassData(super.serialize()).setId(id).setNum(num)
+		ByteString data = Serial.AbstractProp.newBuilder().setSuperClassData(super.serialize()).setNum(num)
 				.setPropType(propType).build().toByteString();
 		return data;
 	}
@@ -58,7 +49,6 @@ public abstract class AbstractProp extends GameEntity {
 		try {
 			Serial.AbstractProp ser = Serial.AbstractProp.parseFrom(data);
 			super.deserialize(ser.getSuperClassData());
-			this.setId(ser.getId());
 			this.setNum(ser.getNum());
 			this.propType = (byte) ser.getPropType();
 		} catch (InvalidProtocolBufferException e) {

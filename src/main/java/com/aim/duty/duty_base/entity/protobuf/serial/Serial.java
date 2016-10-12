@@ -389,7 +389,12 @@ public final class Serial {
     com.google.protobuf.ByteString getSuperClassData();
 
     /**
-     * <code>optional bool change = 2;</code>
+     * <code>optional int32 id = 2;</code>
+     */
+    int getId();
+
+    /**
+     * <code>optional bool change = 3;</code>
      */
     boolean getChange();
   }
@@ -406,6 +411,7 @@ public final class Serial {
     }
     private GameEntity() {
       superClassData_ = com.google.protobuf.ByteString.EMPTY;
+      id_ = 0;
       change_ = false;
     }
 
@@ -440,6 +446,11 @@ public final class Serial {
               break;
             }
             case 16: {
+
+              id_ = input.readInt32();
+              break;
+            }
+            case 24: {
 
               change_ = input.readBool();
               break;
@@ -476,10 +487,19 @@ public final class Serial {
       return superClassData_;
     }
 
-    public static final int CHANGE_FIELD_NUMBER = 2;
+    public static final int ID_FIELD_NUMBER = 2;
+    private int id_;
+    /**
+     * <code>optional int32 id = 2;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int CHANGE_FIELD_NUMBER = 3;
     private boolean change_;
     /**
-     * <code>optional bool change = 2;</code>
+     * <code>optional bool change = 3;</code>
      */
     public boolean getChange() {
       return change_;
@@ -500,8 +520,11 @@ public final class Serial {
       if (!superClassData_.isEmpty()) {
         output.writeBytes(1, superClassData_);
       }
+      if (id_ != 0) {
+        output.writeInt32(2, id_);
+      }
       if (change_ != false) {
-        output.writeBool(2, change_);
+        output.writeBool(3, change_);
       }
     }
 
@@ -514,9 +537,13 @@ public final class Serial {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, superClassData_);
       }
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, id_);
+      }
       if (change_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, change_);
+          .computeBoolSize(3, change_);
       }
       memoizedSize = size;
       return size;
@@ -536,6 +563,8 @@ public final class Serial {
       boolean result = true;
       result = result && getSuperClassData()
           .equals(other.getSuperClassData());
+      result = result && (getId()
+          == other.getId());
       result = result && (getChange()
           == other.getChange());
       return result;
@@ -550,6 +579,8 @@ public final class Serial {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + SUPERCLASSDATA_FIELD_NUMBER;
       hash = (53 * hash) + getSuperClassData().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
       hash = (37 * hash) + CHANGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getChange());
@@ -673,6 +704,8 @@ public final class Serial {
         super.clear();
         superClassData_ = com.google.protobuf.ByteString.EMPTY;
 
+        id_ = 0;
+
         change_ = false;
 
         return this;
@@ -698,6 +731,7 @@ public final class Serial {
       public com.aim.duty.duty_base.entity.protobuf.serial.Serial.GameEntity buildPartial() {
         com.aim.duty.duty_base.entity.protobuf.serial.Serial.GameEntity result = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.GameEntity(this);
         result.superClassData_ = superClassData_;
+        result.id_ = id_;
         result.change_ = change_;
         onBuilt();
         return result;
@@ -742,6 +776,9 @@ public final class Serial {
         if (other == com.aim.duty.duty_base.entity.protobuf.serial.Serial.GameEntity.getDefaultInstance()) return this;
         if (other.getSuperClassData() != com.google.protobuf.ByteString.EMPTY) {
           setSuperClassData(other.getSuperClassData());
+        }
+        if (other.getId() != 0) {
+          setId(other.getId());
         }
         if (other.getChange() != false) {
           setChange(other.getChange());
@@ -801,15 +838,41 @@ public final class Serial {
         return this;
       }
 
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 2;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 2;</code>
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 2;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
       private boolean change_ ;
       /**
-       * <code>optional bool change = 2;</code>
+       * <code>optional bool change = 3;</code>
        */
       public boolean getChange() {
         return change_;
       }
       /**
-       * <code>optional bool change = 2;</code>
+       * <code>optional bool change = 3;</code>
        */
       public Builder setChange(boolean value) {
         
@@ -818,7 +881,7 @@ public final class Serial {
         return this;
       }
       /**
-       * <code>optional bool change = 2;</code>
+       * <code>optional bool change = 3;</code>
        */
       public Builder clearChange() {
         
@@ -885,17 +948,12 @@ public final class Serial {
     com.google.protobuf.ByteString getSuperClassData();
 
     /**
-     * <code>optional int32 id = 2;</code>
-     */
-    int getId();
-
-    /**
-     * <code>optional int32 num = 3;</code>
+     * <code>optional int32 num = 2;</code>
      */
     int getNum();
 
     /**
-     * <code>optional int32 propType = 4;</code>
+     * <code>optional int32 propType = 3;</code>
      */
     int getPropType();
   }
@@ -912,7 +970,6 @@ public final class Serial {
     }
     private AbstractProp() {
       superClassData_ = com.google.protobuf.ByteString.EMPTY;
-      id_ = 0;
       num_ = 0;
       propType_ = 0;
     }
@@ -949,15 +1006,10 @@ public final class Serial {
             }
             case 16: {
 
-              id_ = input.readInt32();
-              break;
-            }
-            case 24: {
-
               num_ = input.readInt32();
               break;
             }
-            case 32: {
+            case 24: {
 
               propType_ = input.readInt32();
               break;
@@ -994,28 +1046,19 @@ public final class Serial {
       return superClassData_;
     }
 
-    public static final int ID_FIELD_NUMBER = 2;
-    private int id_;
-    /**
-     * <code>optional int32 id = 2;</code>
-     */
-    public int getId() {
-      return id_;
-    }
-
-    public static final int NUM_FIELD_NUMBER = 3;
+    public static final int NUM_FIELD_NUMBER = 2;
     private int num_;
     /**
-     * <code>optional int32 num = 3;</code>
+     * <code>optional int32 num = 2;</code>
      */
     public int getNum() {
       return num_;
     }
 
-    public static final int PROPTYPE_FIELD_NUMBER = 4;
+    public static final int PROPTYPE_FIELD_NUMBER = 3;
     private int propType_;
     /**
-     * <code>optional int32 propType = 4;</code>
+     * <code>optional int32 propType = 3;</code>
      */
     public int getPropType() {
       return propType_;
@@ -1036,14 +1079,11 @@ public final class Serial {
       if (!superClassData_.isEmpty()) {
         output.writeBytes(1, superClassData_);
       }
-      if (id_ != 0) {
-        output.writeInt32(2, id_);
-      }
       if (num_ != 0) {
-        output.writeInt32(3, num_);
+        output.writeInt32(2, num_);
       }
       if (propType_ != 0) {
-        output.writeInt32(4, propType_);
+        output.writeInt32(3, propType_);
       }
     }
 
@@ -1056,17 +1096,13 @@ public final class Serial {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, superClassData_);
       }
-      if (id_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, id_);
-      }
       if (num_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, num_);
+          .computeInt32Size(2, num_);
       }
       if (propType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, propType_);
+          .computeInt32Size(3, propType_);
       }
       memoizedSize = size;
       return size;
@@ -1086,8 +1122,6 @@ public final class Serial {
       boolean result = true;
       result = result && getSuperClassData()
           .equals(other.getSuperClassData());
-      result = result && (getId()
-          == other.getId());
       result = result && (getNum()
           == other.getNum());
       result = result && (getPropType()
@@ -1104,8 +1138,6 @@ public final class Serial {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + SUPERCLASSDATA_FIELD_NUMBER;
       hash = (53 * hash) + getSuperClassData().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
       hash = (37 * hash) + NUM_FIELD_NUMBER;
       hash = (53 * hash) + getNum();
       hash = (37 * hash) + PROPTYPE_FIELD_NUMBER;
@@ -1230,8 +1262,6 @@ public final class Serial {
         super.clear();
         superClassData_ = com.google.protobuf.ByteString.EMPTY;
 
-        id_ = 0;
-
         num_ = 0;
 
         propType_ = 0;
@@ -1259,7 +1289,6 @@ public final class Serial {
       public com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractProp buildPartial() {
         com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractProp result = new com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractProp(this);
         result.superClassData_ = superClassData_;
-        result.id_ = id_;
         result.num_ = num_;
         result.propType_ = propType_;
         onBuilt();
@@ -1305,9 +1334,6 @@ public final class Serial {
         if (other == com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractProp.getDefaultInstance()) return this;
         if (other.getSuperClassData() != com.google.protobuf.ByteString.EMPTY) {
           setSuperClassData(other.getSuperClassData());
-        }
-        if (other.getId() != 0) {
-          setId(other.getId());
         }
         if (other.getNum() != 0) {
           setNum(other.getNum());
@@ -1370,41 +1396,15 @@ public final class Serial {
         return this;
       }
 
-      private int id_ ;
-      /**
-       * <code>optional int32 id = 2;</code>
-       */
-      public int getId() {
-        return id_;
-      }
-      /**
-       * <code>optional int32 id = 2;</code>
-       */
-      public Builder setId(int value) {
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 id = 2;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int num_ ;
       /**
-       * <code>optional int32 num = 3;</code>
+       * <code>optional int32 num = 2;</code>
        */
       public int getNum() {
         return num_;
       }
       /**
-       * <code>optional int32 num = 3;</code>
+       * <code>optional int32 num = 2;</code>
        */
       public Builder setNum(int value) {
         
@@ -1413,7 +1413,7 @@ public final class Serial {
         return this;
       }
       /**
-       * <code>optional int32 num = 3;</code>
+       * <code>optional int32 num = 2;</code>
        */
       public Builder clearNum() {
         
@@ -1424,13 +1424,13 @@ public final class Serial {
 
       private int propType_ ;
       /**
-       * <code>optional int32 propType = 4;</code>
+       * <code>optional int32 propType = 3;</code>
        */
       public int getPropType() {
         return propType_;
       }
       /**
-       * <code>optional int32 propType = 4;</code>
+       * <code>optional int32 propType = 3;</code>
        */
       public Builder setPropType(int value) {
         
@@ -1439,7 +1439,7 @@ public final class Serial {
         return this;
       }
       /**
-       * <code>optional int32 propType = 4;</code>
+       * <code>optional int32 propType = 3;</code>
        */
       public Builder clearPropType() {
         
@@ -4988,11 +4988,11 @@ public final class Serial {
   static {
     java.lang.String[] descriptorData = {
       "\n\014Serial.proto\022-com.aim.duty.duty_base.e" +
-      "ntity.protobuf.serial\"\014\n\nGameObject\"4\n\nG" +
-      "ameEntity\022\026\n\016superClassData\030\001 \001(\014\022\016\n\006cha" +
-      "nge\030\002 \001(\010\"Q\n\014AbstractProp\022\026\n\016superClassD" +
-      "ata\030\001 \001(\014\022\n\n\002id\030\002 \001(\005\022\013\n\003num\030\003 \001(\005\022\020\n\010pr" +
-      "opType\030\004 \001(\005\"\261\002\n\021AbstractMagicProp\022\026\n\016su" +
+      "ntity.protobuf.serial\"\014\n\nGameObject\"@\n\nG" +
+      "ameEntity\022\026\n\016superClassData\030\001 \001(\014\022\n\n\002id\030" +
+      "\002 \001(\005\022\016\n\006change\030\003 \001(\010\"E\n\014AbstractProp\022\026\n" +
+      "\016superClassData\030\001 \001(\014\022\013\n\003num\030\002 \001(\005\022\020\n\010pr" +
+      "opType\030\003 \001(\005\"\261\002\n\021AbstractMagicProp\022\026\n\016su" +
       "perClassData\030\001 \001(\014\022h\n\014magicDetails\030\002 \003(\013" +
       "2R.com.aim.duty.duty_base.entity.protobu" +
       "f.serial.AbstractMagicProp.MagicDetailsE" +
@@ -5031,13 +5031,13 @@ public final class Serial {
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_GameEntity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_base_entity_protobuf_serial_GameEntity_descriptor,
-        new java.lang.String[] { "SuperClassData", "Change", });
+        new java.lang.String[] { "SuperClassData", "Id", "Change", });
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractProp_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractProp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractProp_descriptor,
-        new java.lang.String[] { "SuperClassData", "Id", "Num", "PropType", });
+        new java.lang.String[] { "SuperClassData", "Num", "PropType", });
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_aim_duty_duty_base_entity_protobuf_serial_AbstractMagicProp_fieldAccessorTable = new

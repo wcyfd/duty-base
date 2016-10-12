@@ -5,14 +5,14 @@ message GameObject{
 
 message GameEntity{
 	bytes superClassData=1;
-	bool change=2;	
+	int32 id =2;
+	bool change=3;	
 }
 
 message AbstractProp{
 	bytes superClassData=1;
-	int32 id=2;
-	int32 num=3;
-	int32 propType=4;
+	int32 num=2;
+	int32 propType=3;
 }
 
 message AbstractMagicProp{

@@ -23,4 +23,13 @@ public class Util {
 		return (int) (System.currentTimeMillis() / 1000);
 	}
 
+	public static void threadSleep(long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }

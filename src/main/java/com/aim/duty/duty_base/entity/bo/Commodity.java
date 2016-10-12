@@ -2,17 +2,20 @@ package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
 import com.aim.duty.duty_base.entity.base.Constant;
-import com.aim.duty.duty_base.entity.base.GameObject;
+import com.aim.duty.duty_base.entity.base.GameEntity;
+import com.google.protobuf.ByteString;
 
-public class Commodity extends AbstractProp {
+public class Commodity extends GameEntity {
+	/**单价*/
 	private int singlePrice;
-
-	private AbstractProp prop;
+	private byte salePropType;
+	private int saleNum;
+	private AbstractProp saleProp;
+	private ByteString salePropData;
 
 	@Override
 	public boolean isChange() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	public int getSinglePrice() {
@@ -23,27 +26,37 @@ public class Commodity extends AbstractProp {
 		this.singlePrice = singlePrice;
 	}
 
-	@Override
-	protected byte getInitPropType() {
-		// TODO Auto-generated method stub
-		return Constant.COMMODITY;
+	public byte getSalePropType() {
+		return salePropType;
 	}
 
-	public AbstractProp getProp() {
-		return prop;
+	public void setSalePropType(byte salePropType) {
+		this.salePropType = salePropType;
 	}
 
-	public void setProp(AbstractProp prop) {
-		this.prop = prop;
+	public ByteString getSalePropData() {
+		this.salePropData = saleProp.serialize();
+		return salePropData;
 	}
 
-	@Override
-	public Commodity clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
-		Commodity commodity = (Commodity) super.clone();
-		if (prop != null) {
-			commodity.setProp(prop.clone());
-		}
-		return commodity;
+	public void setSalePropData(ByteString salePropData) {
+		this.salePropData = salePropData;
 	}
+
+	public AbstractProp getSaleProp() {
+		return saleProp;
+	}
+
+	public void setSaleProp(AbstractProp saleProp) {
+		this.saleProp = saleProp;
+	}
+
+	public int getSaleNum() {
+		return saleNum;
+	}
+
+	public void setSaleNum(int saleNum) {
+		this.saleNum = saleNum;
+	}
+
 }

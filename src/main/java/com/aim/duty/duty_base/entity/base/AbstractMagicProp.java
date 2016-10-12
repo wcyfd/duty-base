@@ -10,7 +10,6 @@ import java.util.Set;
 import com.aim.duty.duty_base.entity.bo.Magic;
 import com.aim.duty.duty_base.entity.protobuf.serial.Serial;
 import com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet;
-import com.aim.duty.duty_base.entity.protobuf.serial.Serial.AbstractMagicProp.MagicSet.Builder;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 

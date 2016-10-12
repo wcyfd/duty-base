@@ -54,6 +54,7 @@ public class DutyBaseApp {
 		}
 		System.out.println(b.getNum());
 		System.out.println(b.getMineId());
+		
 
 	}
 }
