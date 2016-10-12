@@ -643,6 +643,11 @@ public final class Market {
      * <code>optional int32 success = 1;</code>
      */
     int getSuccess();
+
+    /**
+     * <code>optional int32 commodityId = 2;</code>
+     */
+    int getCommodityId();
   }
   /**
    * Protobuf type {@code com.aim.duty.duty_base.entity.protobuf.protocal.market.SC_SaleCommodity}
@@ -657,6 +662,7 @@ public final class Market {
     }
     private SC_SaleCommodity() {
       success_ = 0;
+      commodityId_ = 0;
     }
 
     @java.lang.Override
@@ -687,6 +693,11 @@ public final class Market {
             case 8: {
 
               success_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              commodityId_ = input.readInt32();
               break;
             }
           }
@@ -721,6 +732,15 @@ public final class Market {
       return success_;
     }
 
+    public static final int COMMODITYID_FIELD_NUMBER = 2;
+    private int commodityId_;
+    /**
+     * <code>optional int32 commodityId = 2;</code>
+     */
+    public int getCommodityId() {
+      return commodityId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -736,6 +756,9 @@ public final class Market {
       if (success_ != 0) {
         output.writeInt32(1, success_);
       }
+      if (commodityId_ != 0) {
+        output.writeInt32(2, commodityId_);
+      }
     }
 
     public int getSerializedSize() {
@@ -746,6 +769,10 @@ public final class Market {
       if (success_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, success_);
+      }
+      if (commodityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, commodityId_);
       }
       memoizedSize = size;
       return size;
@@ -765,6 +792,8 @@ public final class Market {
       boolean result = true;
       result = result && (getSuccess()
           == other.getSuccess());
+      result = result && (getCommodityId()
+          == other.getCommodityId());
       return result;
     }
 
@@ -777,6 +806,8 @@ public final class Market {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
       hash = (53 * hash) + getSuccess();
+      hash = (37 * hash) + COMMODITYID_FIELD_NUMBER;
+      hash = (53 * hash) + getCommodityId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -897,6 +928,8 @@ public final class Market {
         super.clear();
         success_ = 0;
 
+        commodityId_ = 0;
+
         return this;
       }
 
@@ -920,6 +953,7 @@ public final class Market {
       public com.aim.duty.duty_base.entity.protobuf.protocal.market.Market.SC_SaleCommodity buildPartial() {
         com.aim.duty.duty_base.entity.protobuf.protocal.market.Market.SC_SaleCommodity result = new com.aim.duty.duty_base.entity.protobuf.protocal.market.Market.SC_SaleCommodity(this);
         result.success_ = success_;
+        result.commodityId_ = commodityId_;
         onBuilt();
         return result;
       }
@@ -963,6 +997,9 @@ public final class Market {
         if (other == com.aim.duty.duty_base.entity.protobuf.protocal.market.Market.SC_SaleCommodity.getDefaultInstance()) return this;
         if (other.getSuccess() != 0) {
           setSuccess(other.getSuccess());
+        }
+        if (other.getCommodityId() != 0) {
+          setCommodityId(other.getCommodityId());
         }
         onChanged();
         return this;
@@ -1012,6 +1049,32 @@ public final class Market {
       public Builder clearSuccess() {
         
         success_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int commodityId_ ;
+      /**
+       * <code>optional int32 commodityId = 2;</code>
+       */
+      public int getCommodityId() {
+        return commodityId_;
+      }
+      /**
+       * <code>optional int32 commodityId = 2;</code>
+       */
+      public Builder setCommodityId(int value) {
+        
+        commodityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 commodityId = 2;</code>
+       */
+      public Builder clearCommodityId() {
+        
+        commodityId_ = 0;
         onChanged();
         return this;
       }
@@ -1087,8 +1150,8 @@ public final class Market {
       "ntity.protobuf.protocal.market\"\\\n\020CS_Sal" +
       "eCommodity\022\023\n\013singlePrice\030\001 \001(\005\022\013\n\003num\030\002" +
       " \001(\005\022\020\n\010propType\030\003 \001(\005\022\024\n\014abstractProp\030\004" +
-      " \001(\014\"#\n\020SC_SaleCommodity\022\017\n\007success\030\001 \001(" +
-      "\005b\006proto3"
+      " \001(\014\"8\n\020SC_SaleCommodity\022\017\n\007success\030\001 \001(" +
+      "\005\022\023\n\013commodityId\030\002 \001(\005b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1113,7 +1176,7 @@ public final class Market {
     internal_static_com_aim_duty_duty_base_entity_protobuf_protocal_market_SC_SaleCommodity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_base_entity_protobuf_protocal_market_SC_SaleCommodity_descriptor,
-        new java.lang.String[] { "Success", });
+        new java.lang.String[] { "Success", "CommodityId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

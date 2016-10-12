@@ -8,4 +8,5 @@ message CS_SaleCommodity{
 }
 message SC_SaleCommodity{
 	int32 success=1;
+	int32 commodityId=2;
 }
