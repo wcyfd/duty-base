@@ -1,8 +1,8 @@
 package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractMagicProp;
-import com.aim.duty.duty_base.entity.base.Constant;
 import com.aim.duty.duty_base.entity.protobuf.serial.Serial;
+import com.aim.duty.duty_base.service.prop.PropConstant;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -27,7 +27,7 @@ public class Cement extends AbstractMagicProp {
 	@Override
 	protected byte getInitPropType() {
 		// TODO Auto-generated method stub
-		return Constant.CEMENT;
+		return PropConstant.CEMENT;
 	}
 
 	@Override

@@ -1,8 +1,8 @@
 package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
-import com.aim.duty.duty_base.entity.base.Constant;
 import com.aim.duty.duty_base.entity.base.GameEntity;
+import com.aim.duty.duty_base.service.prop.PropConstant;
 import com.google.protobuf.ByteString;
 
 public class Commodity extends GameEntity {

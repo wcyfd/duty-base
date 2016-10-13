@@ -1,4 +1,4 @@
-package com.aim.duty.duty_base.service;
+package com.aim.duty.duty_base.service.prop;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
 
@@ -8,12 +8,12 @@ public class PropServiceImpl implements PropService {
 	public AbstractProp extract(AbstractProp sourceProp, int extractCount) {
 		// TODO Auto-generated method stub
 		int sourceNum = sourceProp.getNum();
-		int deltaCount = sourceNum - extractCount;
+		int remainCount = sourceNum - extractCount;
 		try {
 			AbstractProp extractProp = sourceProp.clone();
 			
-			extractProp.setNum(deltaCount >= 0 ? extractCount : sourceProp.getNum());
-			sourceProp.setNum(deltaCount >= 0 ? deltaCount : 0);
+			extractProp.setNum(remainCount >= 0 ? extractCount : sourceProp.getNum());
+			sourceProp.setNum(remainCount >= 0 ? remainCount : 0);
 			
 			return extractProp;
 		} catch (CloneNotSupportedException e1) {

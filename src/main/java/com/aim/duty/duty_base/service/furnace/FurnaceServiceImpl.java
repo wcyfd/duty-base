@@ -1,8 +1,9 @@
-package com.aim.duty.duty_base.service;
+package com.aim.duty.duty_base.service.furnace;
 
 import com.aim.duty.duty_base.cache.config.FuelConfigCache;
 import com.aim.duty.duty_base.entity.bo.Furnace;
 import com.aim.duty.duty_base.entity.config.FuelConfig;
+import com.aim.duty.duty_base.service.Constant;
 import com.aim.duty.duty_base.util.Util;
 
 public class FurnaceServiceImpl implements FurnaceService{

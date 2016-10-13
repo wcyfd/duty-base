@@ -1,7 +1,7 @@
 package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
-import com.aim.duty.duty_base.entity.base.Constant;
+import com.aim.duty.duty_base.service.prop.PropConstant;
 
 public class Furnace extends AbstractProp {
 
@@ -87,7 +87,7 @@ public class Furnace extends AbstractProp {
 	@Override
 	protected byte getInitPropType() {
 		// TODO Auto-generated method stub
-		return Constant.FORGE;
+		return PropConstant.FORGE;
 	}
 
 }

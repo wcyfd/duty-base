@@ -4,14 +4,14 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
-import com.aim.duty.duty_base.entity.base.Constant;
+import com.aim.duty.duty_base.service.prop.PropConstant;
 
 public class Wall extends AbstractProp {
 
 	@Override
 	protected byte getInitPropType() {
 		// TODO Auto-generated method stub
-		return Constant.WALL;
+		return PropConstant.WALL;
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 package com.aim.duty.duty_base.entity.bo;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
-import com.aim.duty.duty_base.entity.base.Constant;
+import com.aim.duty.duty_base.service.prop.PropConstant;
 
 public class Prop extends AbstractProp {
 
@@ -33,7 +33,7 @@ public class Prop extends AbstractProp {
 	@Override
 	protected byte getInitPropType() {
 		// TODO Auto-generated method stub
-		return Constant.PROP;
+		return PropConstant.PROP;
 	}
 
 	@Override

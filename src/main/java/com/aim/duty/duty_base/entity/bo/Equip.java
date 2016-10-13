@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
-import com.aim.duty.duty_base.entity.base.Constant;
+import com.aim.duty.duty_base.service.prop.PropConstant;
 
 public class Equip extends AbstractProp {
 
@@ -23,7 +23,7 @@ public class Equip extends AbstractProp {
 	@Override
 	protected byte getInitPropType() {
 		// TODO Auto-generated method stub
-		return Constant.EQUIP;
+		return PropConstant.EQUIP;
 	}
 	
 	

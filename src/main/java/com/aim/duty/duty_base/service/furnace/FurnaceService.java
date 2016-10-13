@@ -1,4 +1,4 @@
-package com.aim.duty.duty_base.service;
+package com.aim.duty.duty_base.service.furnace;
 
 import com.aim.duty.duty_base.entity.bo.Furnace;
 

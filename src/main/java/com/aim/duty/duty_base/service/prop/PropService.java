@@ -1,4 +1,4 @@
-package com.aim.duty.duty_base.service;
+package com.aim.duty.duty_base.service.prop;
 
 import com.aim.duty.duty_base.entity.base.AbstractProp;
 

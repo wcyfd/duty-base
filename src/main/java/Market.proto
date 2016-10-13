@@ -10,3 +10,13 @@ message SC_SaleCommodity{
 	int32 success=1;
 	int32 commodityId=2;
 }
+
+message CS_BuyCommodity{
+	int32 commodityId=1;
+	int32 num=2;
+}
+
+message SC_BuyCommodity{
+	int32 success=1;
+	bytes abstractProp=2;
+}
