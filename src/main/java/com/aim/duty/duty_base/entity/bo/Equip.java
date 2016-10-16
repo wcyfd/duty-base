@@ -21,7 +21,7 @@ public class Equip extends AbstractProp {
 	}
 
 	@Override
-	protected byte getInitPropType() {
+	protected int getInitPropType() {
 		// TODO Auto-generated method stub
 		return PropConstant.EQUIP;
 	}

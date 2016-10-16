@@ -85,7 +85,7 @@ public class Furnace extends AbstractProp {
 	}
 
 	@Override
-	protected byte getInitPropType() {
+	protected int getInitPropType() {
 		// TODO Auto-generated method stub
 		return PropConstant.FORGE;
 	}

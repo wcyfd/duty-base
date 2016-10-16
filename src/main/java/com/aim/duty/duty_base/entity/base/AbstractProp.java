@@ -6,22 +6,13 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 public abstract class AbstractProp extends GameEntity {
 
-	private int num;
-	protected byte propType = -1;
+	protected int propType = -1;
 
 	public AbstractProp() {
 		propType = propType == -1 ? getInitPropType() : this.propType;
 	}
 
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
-	}
-
-	public byte getPropType() {
+	public int getPropType() {
 		return propType;
 	}
 
@@ -30,31 +21,30 @@ public abstract class AbstractProp extends GameEntity {
 		return (AbstractProp) super.clone();
 	}
 
-	protected abstract byte getInitPropType();
+	protected abstract int getInitPropType();
 
 	@Override
 	public abstract boolean isChange();
 
-	@Override
-	public ByteString serialize() {
-		// TODO Auto-generated method stub
-		ByteString data = Serial.AbstractProp.newBuilder().setSuperClassData(super.serialize()).setNum(num)
-				.setPropType(propType).build().toByteString();
-		return data;
-	}
-
-	@Override
-	public void deserialize(ByteString data) {
-		// TODO Auto-generated method stub
-		try {
-			Serial.AbstractProp ser = Serial.AbstractProp.parseFrom(data);
-			super.deserialize(ser.getSuperClassData());
-			this.setNum(ser.getNum());
-			this.propType = (byte) ser.getPropType();
-		} catch (InvalidProtocolBufferException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	@Override
+//	public ByteString serialize() {
+//		// TODO Auto-generated method stub
+//		ByteString data = Serial.AbstractProp.newBuilder().setSuperClassData(super.serialize()).setPropType(propType)
+//				.build().toByteString();
+//		return data;
+//	}
+//
+//	@Override
+//	public void deserialize(ByteString data) {
+//		// TODO Auto-generated method stub
+//		try {
+//			Serial.AbstractProp ser = Serial.AbstractProp.parseFrom(data);
+//			super.deserialize(ser.getSuperClassData());
+//			this.propType = ser.getPropType();
+//		} catch (InvalidProtocolBufferException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 
 }

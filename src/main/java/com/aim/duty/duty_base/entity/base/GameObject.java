@@ -11,17 +11,17 @@ public abstract class GameObject implements Cloneable{
 		return super.clone();
 	}
 	
-	public ByteString serialize(){
-		return Serial.GameObject.newBuilder().build().toByteString();
-	}
-	
-	public void deserialize(ByteString data){		
-		try {
-			Serial.GameObject ser = Serial.GameObject.parseFrom(data);
-
-		} catch (InvalidProtocolBufferException e) {
-			e.printStackTrace();
-		}
-	}
+//	public ByteString serialize(){
+//		return Serial.GameObject.newBuilder().build().toByteString();
+//	}
+//	
+//	public void deserialize(ByteString data){		
+//		try {
+//			Serial.GameObject ser = Serial.GameObject.parseFrom(data);
+//
+//		} catch (InvalidProtocolBufferException e) {
+//			e.printStackTrace();
+//		}
+//	}
 	
 }

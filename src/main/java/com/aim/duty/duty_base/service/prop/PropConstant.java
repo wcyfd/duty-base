@@ -1,10 +1,10 @@
 package com.aim.duty.duty_base.service.prop;
 
 public class PropConstant {
-	public static byte PROP = 1;
-	public static byte WALL = 2;
-	public static byte BRICK = 3;
-	public static byte CEMENT = 4;
-	public static byte EQUIP = 5;
-	public static byte FORGE = 6;
+	public static int PROP = 1;
+	public static int WALL = 2;
+	public static int BRICK = 3;
+	public static int CEMENT = 4;
+	public static int EQUIP = 5;
+	public static int FORGE = 6;
 }
