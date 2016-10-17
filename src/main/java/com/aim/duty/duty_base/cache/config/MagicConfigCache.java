@@ -6,6 +6,7 @@ import java.util.Vector;
 
 import com.aim.duty.duty_base.entity.config.MagicConfig;
 
+
 public class MagicConfigCache {
 	public static Map<Integer, MagicConfig> map = new HashMap<>();
 	public static Vector<String> magicNameVector = new Vector<>();
