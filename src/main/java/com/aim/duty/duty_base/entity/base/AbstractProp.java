@@ -1,8 +1,5 @@
 package com.aim.duty.duty_base.entity.base;
 
-import com.aim.duty.duty_base.entity.protobuf.serial.Serial;
-import com.google.protobuf.ByteString;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 public abstract class AbstractProp extends GameEntity {
 
